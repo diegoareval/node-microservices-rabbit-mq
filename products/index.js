@@ -62,8 +62,6 @@ const {ids} = req.body;
     await channel.consume("PRODUCT", (data) => {
         order = JSON.parse(data.content);
     });
-
-
     res.json(order);
 
 });
